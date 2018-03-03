@@ -4,9 +4,10 @@ import Form from './Form';
 import * as apiCalls from './api';
 
 class Screen extends Component {
+    
     constructor(props) {
         super(props);
-        this.state = { screen: [], data: "Initial Data" };
+        this.state = { screen: [], data: 'Initial' };
         this.addScreenData = this.addScreenData.bind(this);
     }
     
@@ -17,6 +18,11 @@ class Screen extends Component {
     async loadScreenData(){
         let screen = await apiCalls.getScreenData();
         this.setState({screen});
+    }
+    
+    async loadScreenDataAgain(){
+        let screen = await apiCalls.getScreenData();
+        return screen;
     }
     
     async addScreenData(val) {

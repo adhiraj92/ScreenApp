@@ -19,7 +19,7 @@ class Form extends Component {
     return (
       <div>
         <input 
-          type="text" 
+          type="text"
           value={this.state.inputData}
           onChange={this.handleChange}
         />

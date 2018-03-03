@@ -25,7 +25,7 @@ export async function createScreenData(val){
      headers: new Headers({
        'Content-Type': 'application/json',
      }),
-    body: JSON.stringify({name: val})
+    body: JSON.stringify({screen: val})
    })
     .then(resp => {
       if(!resp.ok) {
